@@ -3,34 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dutch Auction</title>
+    <title>Dutch Auction - Primary</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="auction-container">
-        <h1>Sofa Auction</h1>
-        <button id="startButton">Start Auction</button>
+        <h1>Primary Sofa Auction</h1>
+        <label for="maxPriceInput">Max Price: </label>
+        <input type="number" id="maxPriceInput" value="200">
+        <label for="minPriceInput">Min Price: </label>
+        <input type="number" id="minPriceInput" value="50">
+        <button id="startButton" class="button">Start Auction</button>
         <div id="clockContainer" class="hidden">
             <svg id="clock" width="200" height="200" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="48" stroke="black" stroke-width="2" fill="none"/>
-                <line id="hourHand" x1="50" y1="50" x2="50" y2="20" stroke="black" stroke-width="2"/>
+                <circle cx="50" cy="50" r="48" stroke="white" stroke-width="2" fill="none"/>
+                <line id="hourHand" x1="50" y1="50" x2="50" y2="20" stroke="white" stroke-width="2"/>
                 <!-- Markings -->
-                <line x1="50" y1="2" x2="50" y2="10" stroke="black" stroke-width="2"/>
-                <line x1="82.5" y1="10" x2="75" y2="18.5" stroke="black" stroke-width="2"/>
-                <line x1="98" y1="50" x2="90" y2="50" stroke="black" stroke-width="2"/>
-                <line x1="82.5" y1="90" x2="75" y2="81.5" stroke="black" stroke-width="2"/>
-                <line x1="50" y1="98" x2="50" y2="90" stroke="black" stroke-width="2"/>
-                <line x1="17.5" y1="90" x2="25" y2="81.5" stroke="black" stroke-width="2"/>
-                <line x1="2" y1="50" x2="10" y2="50" stroke="black" stroke-width="2"/>
-                <line x1="17.5" y1="10" x2="25" y2="18.5" stroke="black" stroke-width="2"/>
+                <line x1="50" y1="2" x2="50" y2="10" stroke="white" stroke-width="2"/>
+                <line x1="82.5" y1="10" x2="75" y2="18.5" stroke="white" stroke-width="2"/>
+                <line x1="98" y1="50" x2="90" y2="50" stroke="white" stroke-width="2"/>
+                <line x1="82.5" y1="90" x2="75" y2="81.5" stroke="white" stroke-width="2"/>
+                <line x1="50" y1="98" x2="50" y2="90" stroke="white" stroke-width="2"/>
+                <line x1="17.5" y1="90" x2="25" y2="81.5" stroke="white" stroke-width="2"/>
+                <line x1="2" y1="50" x2="10" y2="50" stroke="white" stroke-width="2"/>
+                <line x1="17.5" y1="10" x2="25" y2="18.5" stroke="white" stroke-width="2"/>
             </svg>
-            <div id="price">Price: $200</div>
+            <div id="price" class="price">Price: $200</div>
         </div>
-        <button id="stopButton" class="hidden">Buy Now</button>
+        <button id="stopButton" class="button hidden">Buy Now</button>
+        <button id="restartButton" class="button hidden">Restart Auction</button>
         <div id="message" class="hidden">
             <span id="messageText"></span><span id="finalPriceContainer"> You bought the sofa for $<span id="finalPrice"></span></span>
         </div>
-        <button onclick="window.location.href='secondary.html'">Go to Secondary Auction</button>
+        <div class="sofa-photos">
+            <img src="sofa1.jpg" alt="Sofa 1">
+            <img src="sofa2.jpg" alt="Sofa 2">
+            <img src="sofa3.jpg" alt="Sofa 3">
+            <img src="sofa4.jpg" alt="Sofa 4">
+        </div>
+        <button onclick="window.location.href='secondary.html'" class="button">Go to Secondary Auction</button>
     </div>
     <script src="script.js"></script>
 </body>
